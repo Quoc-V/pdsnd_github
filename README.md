@@ -1,5 +1,5 @@
 ### Date created
-Include the date you created this project and README file.
+This Project was started on:
 2020-04-22
 ### Project
  Udacity Data Science Class Python Project
