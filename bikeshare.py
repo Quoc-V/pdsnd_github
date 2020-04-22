@@ -11,7 +11,7 @@ def get_filters():
     Asks user to specify a city, month, and day to analyze.
 
     Returns:
-        (str) city - name of the city to analyze
+        (str) city - name of the city to analyse
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
@@ -30,7 +30,9 @@ def get_filters():
                 if city in valid_cities and month in valid_months and day in valid_days:
                     break
                 else:
-                    print('Unfortunately, your inputs were not valid, please try again')
+
+                    print('Unfortunately, your inputs were invalid, please try again')
+
                     continue
         except ValueError:
             print("Sorry, we did not understand your input. Please try again :)")
