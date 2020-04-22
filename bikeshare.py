@@ -30,7 +30,7 @@ def get_filters():
                 if city in valid_cities and month in valid_months and day in valid_days:
                     break
                 else:
-                    print('Unfortunately, your inputs were not valid, please try again')
+                    print('Unfortunately, your inputs were invalid, please try again')
                     continue
         except ValueError:
             print("Sorry, we did not understand your input. Please try again")
