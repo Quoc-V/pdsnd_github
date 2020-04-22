@@ -18,7 +18,7 @@ def get_filters():
     valid_months = ['january', 'february', 'march', 'april', 'may', 'june', 'july','all']
     valid_cities = ['washington', 'new york city', 'chicago']
     valid_days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday','all']
-    
+
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
@@ -31,14 +31,14 @@ def get_filters():
                     break
                 else:
                     print('Unfortunately, your inputs were not valid, please try again')
-                    continue 
+                    continue
         except ValueError:
-            print("Sorry, we did not understand your input. Please try again")
+            print("Sorry, we did not understand your input. Please try again :)")
             continue
         else:
             break
     # TO DO: get user input for month (all, january, february, ... , june)
-        
+
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
 
@@ -95,7 +95,7 @@ def time_stats(df):
     # TO DO: display the most common month
     popular_month = df['Start Time'].dt.month.mode()[0]
     print('Most frequent month:', popular_month)
-    
+
     #TO DO: display the most common day of week
     popular_day = df['Start Time'].dt.day.mode()[0]
     print('Most frequent day:', popular_day)
@@ -137,7 +137,7 @@ def trip_duration_stats(df):
 
     # TO DO: display total travel time
     total_trip = df['Trip Duration'].sum()
-    print('The total time amount of trips in minutes is:\n ', total_trip) 
+    print('The total time amount of trips in minutes is:\n ', total_trip)
     # TO DO: display mean travel time
     mean_trip = df['Trip Duration'].mean()
     print('The mean travel time of a trip in minutes is:\n ', mean_trip)
@@ -148,7 +148,7 @@ def trip_duration_stats(df):
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
-    
+
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
@@ -162,7 +162,7 @@ def user_stats(df):
         print(" The gender distribution is as follows:\n ", gender)
     else:
         print("Sorry, the Gender Data is missing.\n")
-         
+
     # TO DO: Display earliest, most recent, and most common year of birth
     if 'Birth Year' in df.columns:
         birth_year = df['Birth Year']
@@ -177,7 +177,7 @@ def user_stats(df):
     print('-'*40)
 
 def raw(df):
-    """Displays 5 lines of the raw data of the current dataframe upon user request"""  
+    """Displays 5 lines of the raw data of the current dataframe upon user request"""
     index=0
     raw_check = input('\nWould you like to see the raw data? Enter yes or no.\n')
     while True:
@@ -191,7 +191,7 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-        
+
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
